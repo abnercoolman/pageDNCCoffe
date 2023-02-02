@@ -77,20 +77,31 @@ html {
   left: 0;
   top: 0;
 
-  display: none;
+  display: grid;
   place-items: center;
+  
+  opacity: 0;
+  pointer-events: none;
+  
+  transition: opacity 0.15s;
+}
+
+.modal-show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-intern {
   /* display: none; */
   position: absolute;
-  width: 500px;
-  height: 400px;
-  left: 40%;
-  top: 30%;
+  width: 671px;
+  height: 581px;
+  padding: 25px;
+
+  transition: display 0.15s;
+
   background: #FFFFFF;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 20px;
 }
 
 .close-button-modal-2 {
@@ -118,86 +129,60 @@ html {
 }
 
 .information-modal-2 h2 {
-  font-size: 25px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 39px;
+  line-height: 20px;
   color: #000000;
+  padding-top: 112px;
+  padding-bottom: 69px;
 }
 
 .information-modal-2 p {
-  margin-top: 20px;
+  padding: 0px 70px 0px 70px;
   width: 80%;
   text-align: center;
   align-items: center;
+
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  color: #000000;
 }
 
-.information-modal-2 a {
+/* .information-modal-2 a {
+  
   text-align: center;
   align-items: center;
-}
+} */
 
-.phone-modal-2 {
+.btn-modal-2 {
+  margin-top: 65px;
+  padding: 12px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 260px;
-  height: 36px;
-  margin-top: 15px;
 
-  background: #FFFFFF;
-  border: 1px solid #f0721d;
-  border-radius: 36px;
+  width: 253px;
+  height: 48px;
 
+  background: #2a3342;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 700;
   font-size: 20px;
-  color: #f0721d;
+  line-height: 20px;
+  color: #F6F5FB;
   text-decoration: none;
 }
 
-.phone-modal-2:hover {
-  background: #f0721d;
-  color: #FFFFFF;
-}
-
-.sms-modal-2 {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 260px;
-  height: 36px;
-  margin-top: 15px;
-
-  background: #FFFFFF;
-  border: 1px solid #3651ee;
-  border-radius: 36px;
-
-  font-size: 20px;
-  color: #3651ee;
-  text-decoration: none;
-}
-
-.sms-modal-2:hover {
-  background: #3651ee;
-  color: #FFFFFF;
-}
-
-.whats-modal-2 {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 260px;
-  height: 36px;
-  margin-top: 15px;
-
-  background: #FFFFFF;
-  border: 1px solid #129c29;
-  border-radius: 36px;
-
-  font-size: 20px;
-  color: #129c29;
-  text-decoration: none;
-}
-
-.whats-modal-2:hover {
-  background: #129c29;
-  color: #FFFFFF;
+.btn-modal-2:hover {
+  background: #F6F5FB;
+  color: #2A3342;
+  border: 1px solid #2a3342;
 }
 
 main,

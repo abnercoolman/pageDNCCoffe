@@ -39,10 +39,12 @@ function hideButton(i) {
 var modalAtend = document.querySelector('.blur-modal-2');
 var modalTextBox = document.querySelector('.modal-intern');
 
+const activeModal = 'modal-show'
+
 function showModalAtendimento() {
-    modalAtend.style.display = 'block';
+    modalAtend.classList.add(activeModal);
 }
 
 function hideModalAtendimento() {
-    modalAtend.style.display = 'none';
+    modalAtend.classList.remove(activeModal);
 }
